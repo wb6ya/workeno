@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Workeno</title>
+</head>
+<body>
+    <nav>
+        <h1>Workeno</h1>
+    </nav>
+    <div class="his">
+        <div class="title">التاريخ</div>
+        <div class="title">اوفرتايم</div>
+        <div class="title">الوقت الاضافي</div>
+        <div class="delete"></div>
+    </div>
+    <main class="main">
+    </main>
+    <section>
+        <div class="content">
+            <div>
+                <input class="date" type="date">
+            </div>
+            <div>
+                <label for="checkbox">overtime?</label>
+                <input class="checkbox" type="checkbox" onchange="change()">
+            </div>
+            <div class="azo">
+                <input class="num" type="number" max="10" min="1">
+            </div>
+    
+        </div>
+        <button onclick="add()" class="btn">add</button>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
