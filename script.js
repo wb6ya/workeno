@@ -3,6 +3,7 @@ const main = document.querySelector(".main");
 const num = document.querySelector(".num")
 const check = document.querySelector(".checkbox");
 const btn = document.querySelector(".btn")
+const time = document.querySelector(".time")
 
 const histoy =JSON.parse(localStorage.getItem("data") ) || [];
 update()
@@ -25,6 +26,7 @@ function add() {
     date.value = ''
     check.checked = false
     num.value = ''
+    time.style.display = "none"
     num.style.display = "none"
 }
 
@@ -37,21 +39,28 @@ function dlete(index) {
 function change() {
     if (check.checked) {
         num.style.display = "block"
-    }else{ num.style.display = "none"}
+            time.style.display = "block"
+    }else{ num.style.display = "none"
+            time.style.display = "none"
+    }
 }
 function update() {
     for (let index = 0; index < histoy.length; index++) {
         if (histoy[index].overtime) {
             main.innerHTML +=  `<div class="his">
             <div class="items">${histoy[index].date}</div>
+            <p class="one">|</p>
             <div class="items">نعم</div>
+            <p class="two">|</p>
             <div class="items">${histoy[index].hrs}</div>
              <div class="delete"><button onclick="dlete(${index})">حذف</button></div>
         </div>`
         } else {
             main.innerHTML +=  `<div class="his">
             <div class="items">${histoy[index].date}</div>
+            <p class="one">|</p>
             <div class="items">لا</div>
+            <p class="two">|</p>
             <div class="items">لا يوجد</div>
              <div class="delete"><button onclick="dlete(${index})">حذف</button></div>
         </div>`

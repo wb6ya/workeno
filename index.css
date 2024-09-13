@@ -9,6 +9,8 @@ body{
     align-items: end;
     flex-direction: column;
     overflow-y:hidden ;
+    background-color: #1E201E;
+    color: #ECDFCC;
 }
 nav{
     width: 100%;
@@ -16,8 +18,10 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(255, 255, 255);
     margin-bottom: 10px;
+    font-weight: 700;
+    font-size: larger;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 main{
     height: 35vh;
@@ -32,10 +36,9 @@ section{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
     width: 100%;
     padding:  10px 0;
-    gap: 10px;
+    gap: 20px;
 }
 section button{
     width: 100px;
@@ -46,7 +49,8 @@ section button{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 30px;
+    margin-right: 15px;
 }
 .content div{
     display: flex;
@@ -60,18 +64,40 @@ section button{
     text-align: center;
     display: none;
 }
+.hia{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
 .his{
     display: flex;
     width: 100%;
     justify-content: space-evenly;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
     margin-bottom: 10px;
+    background-color: #3c3d377c;
+    position: relative;
 }
 .items , .title{
     width: 33%;
-    height: 20px;
+    height: 30px;
     text-align: center;
+    line-height: 30px;
+    margin-left: 10px;
+}
+.title{
+    background-color: #3c3d3734;
+    border-radius: 10px;
+}
+label{
+    margin-bottom: 10px;
+}
+.date{
+    width: 80px;
 }
 .delete{
     width: 13%;
@@ -80,5 +106,38 @@ section button{
 }
 .delete button{
     width: 100%;
-    height: 100%
+    height: 100%;
+    border-radius: 4px;
+    padding: 10px;
+    line-height: 2px;
+    background-color: rgb(175, 5, 5);
+    color: white;
+    border: none;
+}
+.two{
+    position: absolute;
+    right: 160px;
+    color: #ffffff18;
+    font-weight: 900;
+}
+.one{
+    position: absolute;
+    left: 115px;
+    color: #ffffff18;
+    font-weight: 900;
+}
+.time{
+    display: none;
+}
+.btn{
+    border-radius: 30px;
+    font-weight: 700;
+    background:rgb(247, 54, 54);
+    color: #ECDFCC;
+    height: 40px;
+}
+.date , .num{
+    border-radius: 10px;
+    height: 25px;
+    width: 100%;
 }

@@ -10,7 +10,7 @@
     <nav>
         <h1>Workeno</h1>
     </nav>
-    <div class="his">
+    <div class="hia">
         <div class="title">التاريخ</div>
         <div class="title">اوفرتايم</div>
         <div class="title">الوقت الاضافي</div>
@@ -21,19 +21,22 @@
     <section>
         <div class="content">
             <div>
-                <input class="date" type="date">
+                <label for="date">تاريخ</label>
+                <input class="date" type="date" placeholder="تاريخ">
             </div>
             <div>
-                <label for="checkbox">overtime?</label>
+                <label for="checkbox">اوفرتايم؟</label>
                 <input class="checkbox" type="checkbox" onchange="change()">
             </div>
             <div class="azo">
-                <input class="num" type="number" max="10" min="1">
+                <label class="time" for="checkbox">وقت اضافي</label>
+                <input class="num" type="number" max="10" min="1" placeholder="الساعات">
             </div>
     
         </div>
-        <button onclick="add()" class="btn">add</button>
+        <button onclick="add()" class="btn">اضف</button>
     </section>
     <script src="script.js"></script>
+    
 </body>
 </html>
