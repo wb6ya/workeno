@@ -85,7 +85,7 @@ function update() {
     }
     day.innerHTML = stats.days + 1
     stats.money = (stats.days + 1) * 100;
-    stats.over *= 12.5
+    stats.over = stats.over * 12.5
     total = stats.money + stats.over;
     mone.innerHTML = total + "$"
 
