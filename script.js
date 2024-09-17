@@ -8,7 +8,7 @@ const day = document.querySelector(".day")
 const mone = document.querySelector(".money")
 
 let total = 0;
-const stats = JSON.parse(localStorage.getItem("total")) || {
+const stats = {
     days : 0,
     money : 0,
     over: 0
@@ -56,9 +56,6 @@ function change() {
     }
 }
 function update() {
-    stats.days  = 0;
-    stats.mone = 0;
-    stats.over = 0
     for (let index = 0; index < histoy.length; index++) {
         if (histoy[index].overtime) {
             main.innerHTML +=  `<div class="his">
@@ -89,6 +86,5 @@ function update() {
     total = stats.money + stats.over;
     mone.innerHTML = total + "$"
 
-    localStorage.setItem("total",JSON.stringify(stats))
     localStorage.setItem("data",JSON.stringify(histoy))
 }
